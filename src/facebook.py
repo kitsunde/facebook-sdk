@@ -491,6 +491,7 @@ def parse_signed_request(signed_request, secret):
     Based on http://sunilarora.org/parsing-signedrequest-parameter-in-python-bas
     """
     if not signed_request: return None
+    signed_request = bytes(signed_request)
 
     logger = logging.getLogger('facebook')
     try:
